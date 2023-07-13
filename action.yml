@@ -10,6 +10,7 @@ runs:
 
     - name: Install XSLX
       run: npm install xlsx
+      shell: bash
 
     - name: Covert json files to excel files
       id: convert-json-2-xslx
