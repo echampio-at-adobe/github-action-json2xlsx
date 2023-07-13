@@ -8,11 +8,9 @@ runs:
       with:
         node-version: lts/*
 
-    - name: Install xslx lib
+    - name: Install XSLX
       run: npm install xlsx
-      shell: bash
 
     - name: Covert json files to excel files
       id: convert-json-2-xslx
       run: node src/covert_json_2_xslx.js
-      shell: bash
