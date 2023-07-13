@@ -14,3 +14,4 @@ runs:
     - name: Covert json files to excel files
       id: convert-json-2-xslx
       run: node src/covert_json_2_xslx.js
+      shell: bash
