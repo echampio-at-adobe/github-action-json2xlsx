@@ -1,0 +1,14 @@
+# .github/workflows/test_action.yaml
+name: Test Action
+on: [push]
+
+jobs:
+  get-num-square:
+    runs-on: ubuntu-latest
+    name: Returns the number square
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Converting
+        id: convert-json-2-xslx
+        uses: ./
