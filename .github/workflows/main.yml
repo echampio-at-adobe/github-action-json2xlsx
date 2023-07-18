@@ -19,8 +19,11 @@ jobs:
       run: npm ci
     - name: Convert JSON to XLSX
       run: npm run start
-    - name: Archive production artifacts
-      uses: actions/upload-artifact@v2
+    - name: Archive .xlsx files
+        run: |
+          find . -name "*.xlsx" -print | zip archive.zip -@
+    - name: Upload archive
+      uses: actions/upload-artifact@v3
       with:
-        name: output
-        path: *.xlsx
+        name: archive
+        path: ./archive.zip
