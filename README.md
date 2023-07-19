@@ -1,2 +1,7 @@
-# github-action-json2xslx
-use github action to covert json files to excel files
+# JSON2XLSX
+
+Use github action to covert json files to excel files
+
+## Get started
+
+Just upload a json file to try it
