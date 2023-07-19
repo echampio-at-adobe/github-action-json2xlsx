@@ -28,6 +28,8 @@ function convertJsonToXlsx(jsonData, outputFileName) {
 
 async function getLatestCommitFiles() {
   const git = simpleGit();
+  const isShallow = await git.raw(['rev-parse', '--is-shallow-repository']);
+  console.log(isShallow);
   const logList = await git.log();
   const latestCommitHash = logList.latest.hash;
   const diffSummary = await git.diffSummary([
