@@ -27,7 +27,7 @@ function convertJsonToXlsx(jsonData, outputFileName) {
 }
 
 async function getLatestCommitFiles() {
-  const git = simpleGit('/home/runner/work/github-action-json2xlsx/github-action-json2xlsx', { binary: 'git' });
+  const git = simpleGit();
   const logList = await git.log();
   const latestCommitHash = logList.latest.hash;
   const diffSummary = await git.diffSummary([
