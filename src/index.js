@@ -31,7 +31,7 @@ async function getLatestCommitFiles() {
   const logList = await git.log();
   const latestCommitHash = logList.latest.hash;
   const diffSummary = await git.diffSummary([
-    `${latestCommitHash}~1..${latestCommitHash}`,
+    `${latestCommitHash}~1...${latestCommitHash}`,
   ]);
 
   console.log("Files changed in the latest commit:");
