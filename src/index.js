@@ -2,7 +2,7 @@ const XLSX = require("xlsx");
 const fs = require("fs").promises;
 const simpleGit = require("simple-git");
 
-const git = simpleGit();
+const git = simpleGit('.');
 
 async function readJsonFile(filepath) {
   try {
